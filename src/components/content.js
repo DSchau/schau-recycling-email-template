@@ -6,10 +6,18 @@ export function Content({ email, message, name }) {
     <row>
       <columns>
         <callout className="success">
-          <p className={`${styles.paragraph} text-center`}>You have received a new email from {name}!</p>
+          <p {...styles.paragraph} className="text-center">
+            You have received a new email from {name}!
+          </p>
         </callout>
-        <p className={styles.message}>{message}</p>
-        <button className={`${styles.button} rounded small-expanded`} href={`mailto="${email}"`}>Send a Reply</button>
+        <p {...styles.message}>{message}</p>
+        <button
+          className="rounded small-expanded"
+          href={`mailto="${email}"`}
+          halign="middle"
+        >
+          Send a Reply
+        </button>
       </columns>
     </row>
   );
@@ -25,9 +33,5 @@ const styles = {
     paddingBottom: 16,
     borderTop: `1px solid #DDD`,
     borderBottom: `1px solid #DDD`
-  }),
-  button: css({
-    margin: `0 auto !important`,
-    Margin: `0 auto !important`
   })
 };

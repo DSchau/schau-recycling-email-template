@@ -1,14 +1,9 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Content, Footer, Header } from './components';
 
-function EmailTemplate({
-  email,
-  message,
-  name,
-  subject
-}) {
+function EmailTemplate({ email, message, name, subject }) {
   return (
     <table className="body" data-made-with-foundation>
       <tr>

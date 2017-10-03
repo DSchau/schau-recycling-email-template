@@ -4,8 +4,10 @@ import { css } from 'glamor';
 export function Header({ title }) {
   return (
     <row>
-      <columns className={styles.header}>
-        <h1 className={`${styles.title} text-center`}>{title}</h1>
+      <columns {...styles.header}>
+        <h1 {...styles.title} className="text-center">
+          {title}
+        </h1>
       </columns>
     </row>
   );

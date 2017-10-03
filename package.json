@@ -1,6 +1,6 @@
 {
   "name": "@dschau/email-template",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0",
   "description": "A simple React component to render an e-mail, sent by",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -13,6 +13,7 @@
   "scripts": {
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
+    "format": "prettier --write --single-quote \"src/**/*.js\"",
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
@@ -20,14 +21,15 @@
   },
   "dependencies": {
     "glamor": "~2.20.40",
-    "inky": "~1.3.7",
     "prop-types": "~15.6.0"
   },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
+    "inky": "~1.3.7",
     "nwb": "0.19.x",
+    "prettier": "~1.7.4",
     "react": "~16.0.0",
     "react-dom": "~16.0.0"
   },
