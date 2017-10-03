@@ -1,7 +1,7 @@
 {
   "name": "@dschau/email-template",
   "version": "1.0.0",
-  "description": "email-template React component",
+  "description": "A simple React component to render an e-mail, sent by",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -31,10 +31,10 @@
     "react": "~16.0.0",
     "react-dom": "~16.0.0"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Dustin Schau <dustinschau@gmail.com>",
+  "homepage": "https://dustinschau.com",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/dschau/email-template",
   "keywords": [
     "react-component"
   ]
