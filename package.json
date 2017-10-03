@@ -37,5 +37,8 @@
   "repository": "https://github.com/dschau/email-template",
   "keywords": [
     "react-component"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
