@@ -2,7 +2,7 @@ import expect from 'expect'
 import React from 'react'
 import {render, unmountComponentAtNode} from 'react-dom'
 
-import Component from 'src/'
+import EmailTemplate from 'src/'
 
 describe('Component', () => {
   let node
@@ -16,8 +16,8 @@ describe('Component', () => {
   })
 
   it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
-      expect(node.innerHTML).toContain('Welcome to React components')
+    render(<EmailTemplate name="Dustin Schau" email="dustinschau@gmail.com" message="Hello World" />, node, () => {
+      expect(node.innerHTML).toContain('Hello World')
     })
   })
 })

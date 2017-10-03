@@ -1,16 +1,14 @@
-sudo: false
-
 language: node_js
 node_js:
-  - 6
+  - stable
+cache:
+  yarn: true
 
-before_install:
-  - npm install codecov.io coveralls
-
-after_success:
-  - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-
-branches:
-  only:
-    - master
+before_deploy: yarn build
+deploy:
+  provider: npm
+  email: dustinschau@gmail.com
+  api_key: $NPM_API_KEY
+  skip_cleanup: true
+  on:
+    tags: true
