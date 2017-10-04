@@ -27,6 +27,7 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "he": "~1.1.1",
     "inky": "~1.3.7",
     "nwb": "0.19.x",
     "prettier": "~1.7.4",

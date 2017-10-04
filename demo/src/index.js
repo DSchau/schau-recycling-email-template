@@ -1,5 +1,6 @@
 import React from 'react'
-import { renderToString } from 'react-dom/server'
+import { renderToStaticMarkup } from 'react-dom/server'
+import * as he from 'he';
 import inky from './inky';
 import appendStyle from './append-style';
 
@@ -12,14 +13,22 @@ function Demo() {
     <EmailTemplate
       email="dustinschau@gmail.com"
       name="Dustin Schau"
-      message="Hey Dustin, liked the talk last night, i gathered some notes / feedback and would love to share it if you like. Just a warning, sometimes my comments are more critical than just polite platitudes. :) Please email me if you're interested."
+      message={`
+Hey Dustin,
+
+Just testing multi-line input's.
+
+OK, bye.
+
+Other Dustin
+      `}
     />
   );
 }
 
-const html = renderToString(<Demo />);
+const html = renderToStaticMarkup(<Demo />);
 
-document.querySelector('#demo').innerHTML = inky(html);
+document.querySelector('#demo').innerHTML = inky(he.decode(html));
 appendStyle(FOUNDATION_STYLE);
 
 document.body.style.margin = 0;

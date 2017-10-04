@@ -10,7 +10,12 @@ export function Content({ email, message, name }) {
             You have received a new email from {name}!
           </p>
         </callout>
-        <p {...styles.message}>{message}</p>
+        <div {...styles.messageContainer}>
+          {
+            message.split(/\n/)
+              .map((messageWithLine, index) => <p key={index}>{messageWithLine}</p>)
+          }
+        </div>
         <button
           className="rounded small-expanded"
           href={`mailto="${email}"`}
@@ -28,9 +33,9 @@ const styles = {
     margin: 0,
     padding: 0
   }),
-  message: css({
-    paddingTop: 16,
-    paddingBottom: 16,
+  messageContainer: css({
+    marginTop: 12,
+    marginBottom: 12,
     borderTop: `1px solid #DDD`,
     borderBottom: `1px solid #DDD`
   })
