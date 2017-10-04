@@ -18,7 +18,7 @@ export function Content({ email, message, name }) {
         </div>
         <button
           className="rounded small-expanded"
-          href={`mailto="${email}"`}
+          href={`mailto=${email}`}
           halign="middle"
         >
           Send a Reply
