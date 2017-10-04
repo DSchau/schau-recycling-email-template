@@ -1,17 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'glamor';
 
 export function Header({ title }) {
   return (
     <row>
-      <columns {...styles.header}>
-        <h1 {...styles.title} className="text-center">
-          {title}
-        </h1>
+      <columns className={styles.header}>
+        <h1 className={`${styles.title} text-center`}>{title}</h1>
       </columns>
     </row>
   );
 }
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
 const styles = {
   header: css({

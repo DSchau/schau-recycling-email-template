@@ -4,8 +4,8 @@ import { css } from 'glamor';
 export function Footer() {
   return (
     <row>
-      <columns {...styles.footer} vertical-align="center">
-        <p {...styles.text} className="text-center">
+      <columns className={styles.footer} vertical-align="center">
+        <p className={`${styles.text} text-center`}>
           Message sent from AWS Lamda
         </p>
       </columns>
