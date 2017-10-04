@@ -10,4 +10,4 @@ export const markdownToHtml = (md, callback) => {
       }
       callback(null, String(file));
     });
-}
+};
