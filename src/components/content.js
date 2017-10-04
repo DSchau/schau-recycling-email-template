@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'glamor';
 
-export function Content({ body, email, message, name, subject }) {
-  return (
+import { markdownToHtml } from '../util';
+
+export class Content extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      html: ``
+    };
+  }
+
+  componentWillMount() {
+    markdownToHtml(this.props.message, (err, html) => {
+      this.setState({
+        html
+      });
+    })
+  }
+
+  render() {
+    const { body, email, message, name, subject } = this.props;
+    const { html } = this.state;
+    console.log(html);
+    return (
     <row>
       <columns>
         <callout className="success">
@@ -11,13 +33,7 @@ export function Content({ body, email, message, name, subject }) {
             You have received a new email from {name}!
           </p>
         </callout>
-        <div className={styles.messageContainer}>
-          {message
-            .split(/\n/)
-            .map((messageWithLine, index) => (
-              <p key={index}>{messageWithLine}</p>
-            ))}
-        </div>
+        <div className={styles.messageContainer} dangerouslySetInnerHTML={{ __html: html }} />
         <button
           className="rounded small-expanded"
           href={`mailto:${email}?subject=${subject}!&body=${body}`}
@@ -28,6 +44,7 @@ export function Content({ body, email, message, name, subject }) {
       </columns>
     </row>
   );
+  }
 }
 
 Content.defaultProps = {

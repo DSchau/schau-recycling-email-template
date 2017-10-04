@@ -14,13 +14,16 @@ function Demo() {
       email="dustinschau@gmail.com"
       name="Dustin Schau"
       message={`
-Hey Dustin,
+# Hello
 
-Just testing multi-line input's.
+My name is Dustin Schau, and I am testing out the Markdown feature.
 
-OK, bye.
+I have a few things to say, namely:
 
-Other Dustin
+- uno
+- dos
+- tres
+- catorce
       `}
     />
   );
