@@ -3,7 +3,7 @@
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
 
-A simple React component to render an e-mail, sent by [email-handler][email-handler]
+A simple React component to render an e-mail, sent by [schau-recycling-email-handler][schau-recycling-email-handler]
 
 ![Example email](assets/example.png)
 
@@ -13,4 +13,4 @@ A simple React component to render an e-mail, sent by [email-handler][email-hand
 [npm-badge]: https://img.shields.io/npm/v/@dschau/email-template.png?style=flat-square
 [npm]: https://www.npmjs.org/package/@dschau/email-template
 
-[email-handler]: https://github.com/dschau/email-handler
+[schau-recycling-email-handler]: https://github.com/dschau/schau-recycling-email-handler
