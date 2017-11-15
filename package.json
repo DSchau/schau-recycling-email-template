@@ -1,5 +1,5 @@
 {
-  "name": "@dschau/schau-recyclingemail-template",
+  "name": "@schau-recycling/email-template",
   "version": "1.0.0",
   "description": "A simple React component to render an e-mail, sent by",
   "main": "lib/index.js",
