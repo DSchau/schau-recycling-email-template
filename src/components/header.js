@@ -18,8 +18,7 @@ Header.propTypes = {
 
 const styles = {
   header: css({
-    background: '#e54226',
-    background: `linear-gradient(to left, #ffa81f, #e54226)`,
+    background: '#2B3A42',
     paddingTop: 16
   }),
   title: css({

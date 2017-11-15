@@ -23,7 +23,7 @@ function EmailTemplate({ email, message, name, subject }) {
 }
 
 EmailTemplate.defaultProps = {
-  subject: 'Hello from dustinschau.com'
+  subject: 'Hello from schaurecycling.com'
 };
 
 EmailTemplate.propTypes = {

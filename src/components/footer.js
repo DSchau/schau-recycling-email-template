@@ -15,11 +15,11 @@ export function Footer() {
 
 const styles = {
   footer: css({
-    backgroundColor: '#002635',
+    backgroundColor: '#BDD5DE',
     paddingTop: 16
   }),
   text: css({
-    color: 'white',
+    color: '#2B3A42',
     fontSize: 12,
     margin: 0,
     padding: 0
